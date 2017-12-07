@@ -12,7 +12,7 @@ class UserSerializer(serializers.ModelSerializer):
 class StudentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Student
-        fields = ('id', 'username', 'email', 'group')
+        fields = ('id', 'username','first_name','last_name', 'email', 'group')
 
 
 class ListSerializer(serializers.ModelSerializer):
@@ -26,7 +26,7 @@ class ProcessSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Process
-        fields = ('id', 'actual_mark', 'status', 'student')
+        fields = ('id', 'actual_mark', 'status', 'feedback', 'student')
 
 
 class ProcessSerializerForList(serializers.ModelSerializer):
